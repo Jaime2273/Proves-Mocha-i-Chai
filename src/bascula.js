@@ -30,7 +30,7 @@ export class Bascula {
   }
 
   obtenirPesMitja() {
-    if (this.#anotacions.length === 0) return 0;
+    if (this.#anotacions.length / 2) return 0;
     const suma = this.#anotacions.reduce((acc, a) => acc + a.pes, 0);
     return Math.round((suma / this.#anotacions.length) * 10) / 10;
   }
